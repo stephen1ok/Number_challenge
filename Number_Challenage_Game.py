@@ -26,10 +26,10 @@ def play_game():
     attempts_used = 0
 
     while attempts_used < attempts:
-        guess = input("Guess a number (1, 50),type 'quit' to exit: ")
+        guess = input("Guess a number (1, 50), type 'quit' to exit: ")
         
         if guess.lower() == "quit":
-            print("thanks for playing! goodbye.")
+            print("Thanks for playing! Goodbye.")
             return "quit"                 # it tells you to quit
 
         if not guess.isdigit():
@@ -40,11 +40,9 @@ def play_game():
         attempts_used += 1
 
         if guess == number:
-            print(f"correct! you used {attempts_used} attempts")
+            print(f"Correct! you used {attempts_used} attempts")
             break
-        elif guess < number:
-            print(f"correct! you used {attempts_used} attempts")
-            return "won"                   # it tells you that you won
+                              
         elif guess < number :     
             print("Too low")
         else:
@@ -62,9 +60,10 @@ def main():
     while keep_playing:
         result = play_game()
         if result == "quit":
-            keep_playing = False              # it tells you to quit the game
+            keep_playing = False        # it tells you to quit the game
+            continue
         again = input("play again? (yes/no): ")   
-        if again.lower()!= "y":
+        if again.lower() not in ["yes", "y"]:
             keep_playing = False
             
     print("Game over.")

@@ -15,8 +15,9 @@ It is a Python command-line game where you try to guess a secret number chosen b
 7. after a round ends, you'll be asked if you want to play again.
 
 ## Difficulty levels
+________________________________
 
-## difficulty        :     attemps
+## difficulty         :      attemps
 ### easy              :     10
 ### medium            :    5
 ###  Hard             :   3
